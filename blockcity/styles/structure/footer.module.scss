@@ -1,0 +1,76 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start of the flex container */
+    justify-content: center; /* Center items vertically */
+    text-align: left; /* Align text to the left */
+    overflow: hidden; /* Ensure the gradient doesn't overflow */
+    background: linear-gradient(to bottom, transparent, #df9d42, #5546ff, transparent); /* Use linear gradient with transparent start */
+
+    > div {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size-3x);
+    }
+
+    h4 {
+        margin-bottom: 2rem;
+        z-index: 3;
+       
+    }
+
+    a {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: black;
+        margin-bottom: -1rem;
+       
+        &:hover {
+            color: var(--primary-bright);
+        }
+    }
+
+    p {
+        font-size: 2rem;
+        color: black;
+    }
+}
+
+.socialList {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem; /* Adjust the spacing between icons */
+    align-items: center; /* Align items vertically */
+    justify-content: flex-end; /* Align social icons to the end of the container */
+
+    i {
+        font-size: 1.7rem; /* Adjust the font size as needed */
+    }
+
+    svg {
+        height: 4rem;
+    }
+}
+
+
+
+/* Additional styles for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        text-align: center; /* Align text to center */
+        align-items: center; /* Align items to the center of the flex container */
+        gap: 0rem; /* Adjust the gap between sections */
+        margin-bottom: 5rem;
+    }
+
+    .socialList {
+        display: flex;
+        flex-direction: row; /* Align icons horizontally */
+        align-items: center; /* Align social icons vertically */
+        justify-content: center; /* Align social icons horizontally */
+        gap: 1rem; /* Adjust the gap between icons */
+        margin-top: 5rem;
+    }
+}
+
+
